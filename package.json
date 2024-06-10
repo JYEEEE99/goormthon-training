@@ -1,0 +1,19 @@
+{
+  "name": "goormthon",
+  "version": "1.0.0",
+  "description": "goormthon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JYEEEE99/goormthon.git"
+  },
+  "author": "Jin Young",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JYEEEE99/goormthon/issues"
+  },
+  "homepage": "https://github.com/JYEEEE99/goormthon#readme"
+}
