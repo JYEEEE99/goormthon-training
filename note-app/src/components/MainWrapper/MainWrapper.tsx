@@ -1,19 +1,21 @@
-import React from 'react'
-import { NotesContainer } from '../../styles/styles';
-import { Note } from '../../types/note'
-import NoteCard from '../NoteCard/NoteCard';
+import React, { FC } from "react";
+import { NotesContainer } from "../../styles/styles";
+import { Note } from "../../types/note";
+import NoteCard from "../NoteCard/NoteCard";
 
 interface MainWrapperProps {
   notes: Note[];
   type: string;
 }
 
-const MainWrapper = ({ notes, type }: MainWrapperProps) => {
+const MainWrapper: FC<MainWrapperProps> = ({ notes, type }) => {
   return (
     <NotesContainer>
-   
+      {notes.map((note) => (
+        <NoteCard key={note.id} note={note} type={type} />
+      ))}
     </NotesContainer>
-  )
-}
+  );
+};
 
-export default MainWrapper
+export default MainWrapper;

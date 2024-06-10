@@ -6,6 +6,7 @@ import { MdEdit } from "react-icons/md";
 import { v4 } from "uuid";
 import { NavLink, useLocation } from "react-router-dom";
 import { toggleMenu, toggleTagsModal } from "../../store";
+import getStandardName from "../../utils/getStandardName";
 
 // sidebar items
 const items = [
@@ -45,6 +46,23 @@ const Sidebar: FC = () => {
               <span>Notes</span>
             </NavLink>
           </li>
+          {/* tags item */}
+          {tagsList?.map(({ tag, id }) => (
+            <li key={id} onClick={() => dispatch(toggleMenu(false))}>
+              <NavLink
+                to={`/tag/${tag}`}
+                state={`${tag}`}
+                className={({ isActive }) =>
+                  isActive ? "active-item" : "inactive-item"
+                }
+              >
+                <span>
+                  <FaTag />
+                </span>
+                <span>{getStandardName(tag)}</span>
+              </NavLink>
+            </li>
+          ))}
           {/* edit tag item */}
           <li
             className="sidebar__edit-item"

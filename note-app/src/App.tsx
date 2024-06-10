@@ -9,7 +9,7 @@ import {
   TrashNotes,
 } from "./pages";
 import { useAppSelector } from "./hooks/redux";
-import { TagsModal } from "./components";
+import { CreateNoteModal, TagsModal } from "./components";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="app">
-      {viewEditTagsModal && <TagsModal type="edit" />}
+      {viewEditTagsModal && <CreateNoteModal />}
       <BrowserRouter>
         <Sidebar />
         <div className="app__container">

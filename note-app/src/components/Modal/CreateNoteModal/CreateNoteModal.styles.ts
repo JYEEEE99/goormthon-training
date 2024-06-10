@@ -10,6 +10,7 @@ export const Box = styled.div`
   .createNote__create-btn {
     display: flex;
     justify-content: flex-end;
+    margin-top: 20px;
   }
 `;
 

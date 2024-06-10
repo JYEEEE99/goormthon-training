@@ -5,6 +5,7 @@ import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 import { Box, InputBox, TopBox } from "./AllNotes.styles";
 import { toggleFiltersModal } from "../../store";
 import getAllNotes from "../../utils/getAllNotes";
+import { FiltersModal } from "../../components";
 
 const AllNotes = () => {
   const dispatch = useAppDispatch();
@@ -12,8 +13,26 @@ const AllNotes = () => {
   const [filter, setFilter] = useState("");
   const [searchInput, setSearchInput] = useState("");
 
+  const { viewFiltersModal } = useAppSelector((state) => state.modal);
+
+  const filterHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFilter(e.target.value);
+  };
+
+  const clearHandler = () => {
+    setFilter("");
+  };
+
   return (
     <Container>
+      {/* filter modal */}
+      {viewFiltersModal && (
+        <FiltersModal
+          handleFilter={filterHandler}
+          handleClear={clearHandler}
+          filter={filter}
+        />
+      )}
       {/* notes */}
       {mainNotes.length === 0 ? (
         <EmptyMsgBox>노트가 없습니다.</EmptyMsgBox>
