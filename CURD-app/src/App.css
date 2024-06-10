@@ -1,0 +1,68 @@
+.App {
+  width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.write__box {
+  width: 100%;
+}
+.write__box input {
+  width: 100%;
+  outline: none;
+  border: none;
+  height: 22px;
+  font-size: 18px;
+  border-bottom: 1px solid #afafaf;
+}
+.create__btn {
+  margin-top: 15px;
+}
+button {
+  padding: 6px 10px;
+}
+.item__list {
+  width: 100%;
+  margin-top: 20px;
+}
+.item {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+.total__box {
+  margin-top: 20px;
+  padding-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.message {
+  width: 480px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8aaaa;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 2px;
+  position: fixed;
+  top: 0;
+}
+
+.message button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #721c24;
+}
+
+.clear__btn {
+  margin-top: 10px;
+  cursor: pointer;
+}

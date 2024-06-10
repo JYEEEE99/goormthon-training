@@ -1,0 +1,96 @@
+* {box-sizing: border-box;}
+body {
+    background-color: #191919;
+    color: white;
+    overflow-x: hidden;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+#header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0 10%;
+    background-color: #191919;
+}
+#header .logo img {
+    height: 60px;
+}
+#header .nav__btn a {
+    margin-left: 30px;
+    transition: all 0.15s ease-in-out;
+}
+#header .nav__btn a:hover {
+    opacity: 0.8;
+}
+.visual {
+    margin-top: 60px;
+    background: url(./images/banner.jpg) center / cover;
+    height: 350px;
+    display: flex;
+    align-items:  center;
+}
+.visual .text__box {
+    margin-left: 20px;
+}
+.text__box__title h3 {
+    font-size: 40px;
+}
+.text__box__play__btn {
+    padding: 5px 12px;
+    margin: 15px 0;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    border-radius: 2px;
+}
+.text__box__play__btn:hover {
+    opacity: 0.7;
+}
+.text__box__description {
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+/* originals */
+.title h3 {
+    font-size: 25px;
+    margin: 15px 0;
+}
+.originals .content__box {
+    display: flex;
+}
+.originals .content__box img {
+    width: 200px;
+    height: 300px;
+}
+
+/* trending */
+.trending .content__box {
+    display: flex;
+}
+.trending .content__img img {
+    width: 200px;
+}
+/* 공통 스타일 */
+.originals,
+.trending {
+    margin-left: 20px;
+}
+.originals .content__box img,
+.trending .content__img img {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin-right: 10px;
+}
+.originals .content__box img:hover,
+.trending .content__img img:hover {
+    scale: 1.05;
+}
